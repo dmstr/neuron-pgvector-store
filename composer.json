@@ -1,0 +1,47 @@
+{
+    "name": "dmstr/neuron-pgvector-store",
+    "description": "PostgreSQL pgvector vector store adapter for the Neuron AI framework.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "neuron-ai",
+        "pgvector",
+        "postgresql",
+        "vector-store",
+        "rag",
+        "embeddings"
+    ],
+    "authors": [
+        {
+            "name": "diemeisterei GmbH",
+            "homepage": "https://diemeisterei.de"
+        }
+    ],
+    "require": {
+        "php": ">=8.5",
+        "ext-pdo": "*",
+        "neuron-core/neuron-ai": "^4.1"
+    },
+    "require-dev": {
+        "ext-pdo_pgsql": "*",
+        "ext-pdo_sqlite": "*",
+        "doctrine/dbal": "^4.0",
+        "phpunit/phpunit": "^12.0"
+    },
+    "suggest": {
+        "doctrine/dbal": "To map the documents table onto a Doctrine entity (Dmstr\\NeuronPgvectorStore\\Doctrine\\VectorType) and manage the schema via migrations"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dmstr\\NeuronPgvectorStore\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dmstr\\NeuronPgvectorStore\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
